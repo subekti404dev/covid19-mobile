@@ -14,7 +14,7 @@ jobs:
         run: yarn install && cd android && chmod +x gradlew && ./gradlew assembleRelease
       - name: ls
         run: cd android/app/build/outputs/apk/release && ls
-#       - uses: actions/upload-artifact@v2
-#         with:
-#           name: my-artifact
-#           path: path/to/artifact/world.txt
+      - uses: actions/upload-artifact@v2
+        with:
+          name: apk
+          path: android/app/build/outputs/apk/release/app-release.apk
