@@ -13,7 +13,7 @@ jobs:
       - name: Build application
         run: yarn install && cd android && chmod +x gradlew && ./gradlew assembleRelease
       - name: ls
-        run: cd android/app/build/outputs/apk && ls
+        run: cd android/app/build/outputs/apk/release && ls
 #       - uses: actions/upload-artifact@v2
 #         with:
 #           name: my-artifact
